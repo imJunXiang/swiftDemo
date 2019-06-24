@@ -14,7 +14,33 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         // 1.创建首页
         tabBar.tintColor = .orange
-        
+        // 添加子控制器
+        addChildViewControllers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 添加加好按钮
+        setupComposeBtn()
+    }
+    
+//    func composeBtnClick() {
+//        print(#function)
+//    }
+    
+    // MARK: - 内部控制方法
+    private func setupComposeBtn() {
+        // 1.添加加号按钮
+        tabBar.addSubview(composeBtn)
+        // 2.调整加号按钮的位置
+        let width = UIScreen.main.bounds.size.width / CGFloat(viewControllers!.count)
+        let rect = CGRect(x: 0, y: 0, width: width, height: 44)
+        composeBtn.frame = rect
+        composeBtn.center = CGPoint(x: tabBar.frame.size.width * 0.5, y: tabBar.frame.size.height * 0.5)
+    }
+    
+    /** 添加所有子控制器 */
+    private func addChildViewControllers() {
         // 1.获取json文件的路径
         let path = Bundle.main.path(forResource: "MainVCSettings.json", ofType: nil)
         // 2.通过文件路径创建NSData
@@ -37,15 +63,14 @@ class MainViewController: UITabBarController {
                 // 发生异常之后 从本地加载子控制器
                 addChild("HomeTableViewController", "首页", imageName: "tabbar_home")
                 addChild("MessageTableViewController", "消息", imageName: "tabbar_message_center")
+                addChild("NullViewController", "", imageName: "")
                 addChild("DiscoverTableViewController", "发现", imageName: "tabbar_discover")
                 addChild("ProfileTableViewController", "我", imageName: "tabbar_profile")
             }
         }
     }
     
-    /**
-     初始化自控制
-     */
+    /** 初始化自控制 */
     private func addChild(_ childControlleraName: String,_ title:String, imageName:String) {
         
         // -1 动态获取命名空间
@@ -67,5 +92,25 @@ class MainViewController: UITabBarController {
         nav.addChild(vc)
         // 3.add
         addChild(nav)
+    }
+    
+    // MARK: - 懒加载
+    private lazy var composeBtn: UIButton = {
+        let btn = UIButton()
+        // 设置前景图片
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: UIControl.State.normal)
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: UIControl.State.selected)
+        // 设置背景图片
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: UIControl.State.normal)
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: UIControl.State.selected)
+        
+        // 添加监听
+//        btn.addTarget(self, action: "composeBtnClick", for: UIControl.Event.touchUpInside)
+//        btn.addTarget(self, action: "composeBtnClick", for: UIControl.Event.touchUpInside)
+        return btn
+    }()
+    
+    func composeBtnClick() {
+        print(#function)
     }
 }
