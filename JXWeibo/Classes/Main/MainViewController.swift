@@ -14,10 +14,33 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         // 1.创建首页
         tabBar.tintColor = .orange
-        addChild("HomeTableViewController", "首页", imageName: "tabbar_home")
-        addChild("MessageTableViewController", "消息", imageName: "tabbar_message_center")
-        addChild("DiscoverTableViewController", "发现", imageName: "tabbar_discover")
-        addChild("ProfileTableViewController", "我", imageName: "tabbar_profile")
+        
+        // 1.获取json文件的路径
+        let path = Bundle.main.path(forResource: "MainVCSettings.json", ofType: nil)
+        // 2.通过文件路径创建NSData
+        if let jsonPath = path {
+            let jsonData = NSData(contentsOfFile: jsonPath)
+            
+            do {
+                // 有可能发生异常的代码放到这里
+                // 3.序列化json数据 --> Array
+                // try : 发生异常会跳到catch中继续执行
+                // try!: 发生异常程序直接崩溃
+                let dictArr = try JSONSerialization.jsonObject(with: jsonData! as Data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                
+                // 4.遍历数组 必须明确数组类型
+                for dict in dictArr as! [[String:String]] {
+                    // 报错的原因是因为参数必须有值，但是字典的返回值是可选类型
+                    addChild(dict["vcName"]!, dict["title"]!, imageName: dict["imageName"]!)
+                }
+            } catch {
+                // 发生异常之后 从本地加载子控制器
+                addChild("HomeTableViewController", "首页", imageName: "tabbar_home")
+                addChild("MessageTableViewController", "消息", imageName: "tabbar_message_center")
+                addChild("DiscoverTableViewController", "发现", imageName: "tabbar_discover")
+                addChild("ProfileTableViewController", "我", imageName: "tabbar_profile")
+            }
+        }
     }
     
     /**
@@ -45,5 +68,4 @@ class MainViewController: UITabBarController {
         // 3.add
         addChild(nav)
     }
-
 }
