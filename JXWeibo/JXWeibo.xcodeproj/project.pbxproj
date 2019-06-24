@@ -14,6 +14,8 @@
 		C7A9860322BFD3BB00078A6C /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9860222BFD3BB00078A6C /* DiscoverTableViewController.swift */; };
 		C7A9860522BFD3C800078A6C /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9860422BFD3C800078A6C /* MessageTableViewController.swift */; };
 		C7A9860722BFD3D800078A6C /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9860622BFD3D800078A6C /* ProfileTableViewController.swift */; };
+		C7A9860B22C0F4C100078A6C /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C7A9860922C0F4C100078A6C /* MainVCSettings.json */; };
+		C7A9860C22C0F4C100078A6C /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9860A22C0F4C100078A6C /* NullViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C7A9860222BFD3BB00078A6C /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		C7A9860422BFD3C800078A6C /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		C7A9860622BFD3D800078A6C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		C7A9860922C0F4C100078A6C /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		C7A9860A22C0F4C100078A6C /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		C7A985F522BFD22C00078A6C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C7A9860822C0F4C100078A6C /* Resource */,
 				C7A9860022BFD34E00078A6C /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -132,6 +137,15 @@
 				C7A985FE22BFD2FF00078A6C /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C7A9860822C0F4C100078A6C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9860922C0F4C100078A6C /* MainVCSettings.json */,
+				C7A9860A22C0F4C100078A6C /* NullViewController.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A9860B22C0F4C100078A6C /* MainVCSettings.json in Resources */,
 				C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +224,7 @@
 				C7A9860322BFD3BB00078A6C /* DiscoverTableViewController.swift in Sources */,
 				C7A9860522BFD3C800078A6C /* MessageTableViewController.swift in Sources */,
 				C7A985E322BFC81300078A6C /* AppDelegate.swift in Sources */,
+				C7A9860C22C0F4C100078A6C /* NullViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
