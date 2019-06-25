@@ -105,12 +105,11 @@ class MainViewController: UITabBarController {
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: UIControl.State.selected)
         
         // 添加监听
-//        btn.addTarget(self, action: "composeBtnClick", for: UIControl.Event.touchUpInside)
-//        btn.addTarget(self, action: "composeBtnClick", for: UIControl.Event.touchUpInside)
+        btn.addTarget(self, action: #selector(composeBtnClick), for: .touchUpInside)
         return btn
     }()
     
-    func composeBtnClick() {
+    @objc func composeBtnClick() {
         print(#function)
     }
 }

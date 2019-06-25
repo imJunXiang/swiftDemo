@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Main/MainViewController.swift"
-            timestampString = "583086085.738813"
+            timestampString = "583160738.060959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "composeBtn"
             landmarkType = "24">
          </BreakpointContent>
