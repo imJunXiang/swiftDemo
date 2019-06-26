@@ -13,7 +13,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1.创建首页
-        tabBar.tintColor = .orange
+//        tabBar.tintColor = .orange
         // 添加子控制器
         addChildViewControllers()
     }
@@ -23,10 +23,6 @@ class MainViewController: UITabBarController {
         // 添加加好按钮
         setupComposeBtn()
     }
-    
-//    func composeBtnClick() {
-//        print(#function)
-//    }
     
     // MARK: - 内部控制方法
     private func setupComposeBtn() {
