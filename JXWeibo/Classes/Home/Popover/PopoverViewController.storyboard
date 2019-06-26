@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D7q-s4-t1C">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popover View Controller-->
+        <scene sceneID="BaI-Aa-RVD">
+            <objects>
+                <viewController id="D7q-s4-t1C" customClass="PopoverViewController" customModule="JXWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdh-YK-9na">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="xC1-eo-UWS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NHM-O1-5uy">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xC1-eo-UWS" firstAttribute="top" secondItem="EtI-sz-Tcm" secondAttribute="top" id="0eY-at-nFo"/>
+                            <constraint firstItem="EtI-sz-Tcm" firstAttribute="trailing" secondItem="xC1-eo-UWS" secondAttribute="trailing" id="FZc-Rv-Y2M"/>
+                            <constraint firstItem="NHM-O1-5uy" firstAttribute="leading" secondItem="EtI-sz-Tcm" secondAttribute="leading" constant="20" id="Kvh-cc-cUf"/>
+                            <constraint firstItem="xC1-eo-UWS" firstAttribute="leading" secondItem="EtI-sz-Tcm" secondAttribute="leading" id="OJL-Dh-lm9"/>
+                            <constraint firstItem="EtI-sz-Tcm" firstAttribute="bottom" secondItem="xC1-eo-UWS" secondAttribute="bottom" id="SMV-M8-YuF"/>
+                            <constraint firstItem="EtI-sz-Tcm" firstAttribute="trailing" secondItem="NHM-O1-5uy" secondAttribute="trailing" constant="20" id="YKj-x5-Wy4"/>
+                            <constraint firstItem="NHM-O1-5uy" firstAttribute="top" secondItem="EtI-sz-Tcm" secondAttribute="top" constant="20" id="obu-Lz-KbG"/>
+                            <constraint firstItem="EtI-sz-Tcm" firstAttribute="bottom" secondItem="NHM-O1-5uy" secondAttribute="bottom" constant="20" id="xQ5-e3-UkC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EtI-sz-Tcm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0l-qu-b77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="-96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popover_background" width="217" height="49"/>
+    </resources>
+</document>

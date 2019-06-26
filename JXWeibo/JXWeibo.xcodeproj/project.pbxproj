@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70DF48022C3C9D000EA5754 /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */; };
+		C70DF48222C3CB0E00EA5754 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */; };
 		C7A985E322BFC81300078A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A985E222BFC81300078A6C /* AppDelegate.swift */; };
 		C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A985E922BFC81400078A6C /* Assets.xcassets */; };
 		C7A985FF22BFD2FF00078A6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A985FE22BFD2FF00078A6C /* MainViewController.swift */; };
@@ -56,9 +58,12 @@
 		C7A986A822C266F300078A6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C7A9868422C266F300078A6C /* README.md */; };
 		C7A986AA22C3B20600078A6C /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */; };
 		C7A986AE22C3B50500078A6C /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A986AD22C3B50500078A6C /* TitleButton.swift */; };
+		C7A986B122C3C05200078A6C /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A986B022C3C05200078A6C /* PopoverViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
+		C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		C7A985DF22BFC81300078A6C /* JXWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A985E222BFC81300078A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A985E922BFC81400078A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +115,7 @@
 		C7A9868422C266F300078A6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		C7A986AD22C3B50500078A6C /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		C7A986B022C3C05200078A6C /* PopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		C7A985F522BFD22C00078A6C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C7A986AF22C3BFC600078A6C /* Popover */,
 				C7A9860022BFD34E00078A6C /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -284,6 +291,16 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		C7A986AF22C3BFC600078A6C /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				C7A986B022C3C05200078A6C /* PopoverViewController.storyboard */,
+				C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */,
+				C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +362,7 @@
 				C7A9868522C266F300078A6C /* LICENSE in Resources */,
 				C7A9860B22C0F4C100078A6C /* MainVCSettings.json in Resources */,
 				C7A986A822C266F300078A6C /* README.md in Resources */,
+				C7A986B122C3C05200078A6C /* PopoverViewController.storyboard in Resources */,
 				C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +405,8 @@
 				C7A9869822C266F300078A6C /* Typealiases.swift in Sources */,
 				C7A9869322C266F300078A6C /* ConstraintConfig.swift in Sources */,
 				C7A9868A22C266F300078A6C /* ConstraintAttributes.swift in Sources */,
+				C70DF48022C3C9D000EA5754 /* PopoverPresentationController.swift in Sources */,
+				C70DF48222C3CB0E00EA5754 /* PopoverViewController.swift in Sources */,
 				C7A9868D22C266F300078A6C /* ConstraintInsets.swift in Sources */,
 				C7A9869F22C266F300078A6C /* ConstraintView+Extensions.swift in Sources */,
 				C7A986A122C266F300078A6C /* Constraint.swift in Sources */,
@@ -530,7 +550,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JXWeibo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +569,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JXWeibo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

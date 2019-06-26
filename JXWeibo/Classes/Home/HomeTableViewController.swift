@@ -35,7 +35,19 @@ class HomeTableViewController: BaseTableViewController {
     }
     
     @objc func titleBtnClick(btn:TitleButton) {
+        // 1.修改箭头方向
         btn.isSelected = !btn.isSelected
+        // 2.弹出菜单
+        let sb = UIStoryboard(name: "PopoverViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        // 2.1 设置转场的代理
+        // 默认情况下moda会移除以前控制器的view,如果自定义就不会
+        vc?.transitioningDelegate = self
+        // 2.2 设置转场的样式
+        vc?.modalPresentationStyle = .custom
+        
+        present(vc!, animated: true, completion: nil)
+        
     }
     
     @objc func leftItemClick() {
@@ -44,5 +56,12 @@ class HomeTableViewController: BaseTableViewController {
     
     @objc func rightItemClick() {
         print(#function)
+    }
+}
+
+extension HomeTableViewController : UIViewControllerTransitioningDelegate {
+    //  实现代理方法，告诉系统谁来负责转场动画
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return PopoverPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
