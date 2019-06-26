@@ -55,6 +55,7 @@
 		C7A986A722C266F300078A6C /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9868322C266F300078A6C /* ConstraintMakerRelatable.swift */; };
 		C7A986A822C266F300078A6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C7A9868422C266F300078A6C /* README.md */; };
 		C7A986AA22C3B20600078A6C /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */; };
+		C7A986AE22C3B50500078A6C /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A986AD22C3B50500078A6C /* TitleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		C7A9868322C266F300078A6C /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		C7A9868422C266F300078A6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		C7A986AD22C3B50500078A6C /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */,
+				C7A986AD22C3B50500078A6C /* TitleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				C7A9869622C266F300078A6C /* ConstraintLayoutGuide.swift in Sources */,
 				C7A9860E22C255AC00078A6C /* BaseTableViewController.swift in Sources */,
 				C7A985FF22BFD2FF00078A6C /* MainViewController.swift in Sources */,
+				C7A986AE22C3B50500078A6C /* TitleButton.swift in Sources */,
 				C7A9869A22C266F300078A6C /* ConstraintOffsetTarget.swift in Sources */,
 				C7A986A622C266F300078A6C /* ConstraintLayoutSupportDSL.swift in Sources */,
 				C7A9869122C266F300078A6C /* ConstraintPriority.swift in Sources */,

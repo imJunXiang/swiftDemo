@@ -23,10 +23,19 @@ class HomeTableViewController: BaseTableViewController {
     }
     
     private func setupNav() {
-        // 1.左边按钮
+        // 1.初始化左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem.creatBarButtonItem(imageName: "navigationbar_friendattention",target: self, action: #selector(leftItemClick))
-        // 2.右边按钮
         navigationItem.rightBarButtonItem = UIBarButtonItem.creatBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(rightItemClick))
+        
+        // 2.初始标题按钮
+        let titleBtn = TitleButton()
+        titleBtn.setTitle("极客江南 ", for: .normal)
+        titleBtn.addTarget(self, action: #selector(titleBtnClick), for: .touchUpInside)
+        navigationItem.titleView = titleBtn
+    }
+    
+    @objc func titleBtnClick(btn:TitleButton) {
+        btn.isSelected = !btn.isSelected
     }
     
     @objc func leftItemClick() {
