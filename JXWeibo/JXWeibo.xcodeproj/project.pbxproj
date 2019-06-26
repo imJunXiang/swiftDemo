@@ -54,6 +54,7 @@
 		C7A986A622C266F300078A6C /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9868222C266F300078A6C /* ConstraintLayoutSupportDSL.swift */; };
 		C7A986A722C266F300078A6C /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9868322C266F300078A6C /* ConstraintMakerRelatable.swift */; };
 		C7A986A822C266F300078A6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C7A9868422C266F300078A6C /* README.md */; };
+		C7A986AA22C3B20600078A6C /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		C7A9868222C266F300078A6C /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		C7A9868322C266F300078A6C /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		C7A9868422C266F300078A6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		C7A985F922BFD22C00078A6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C7A986A922C3B20600078A6C /* UIBarButtonItem+Category.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				C7A9869A22C266F300078A6C /* ConstraintOffsetTarget.swift in Sources */,
 				C7A986A622C266F300078A6C /* ConstraintLayoutSupportDSL.swift in Sources */,
 				C7A9869122C266F300078A6C /* ConstraintPriority.swift in Sources */,
+				C7A986AA22C3B20600078A6C /* UIBarButtonItem+Category.swift in Sources */,
 				C7A9869D22C266F300078A6C /* ConstraintRelation.swift in Sources */,
 				C7A986A222C266F300078A6C /* Debugging.swift in Sources */,
 				C7A9868622C266F300078A6C /* ConstraintMultiplierTarget.swift in Sources */,

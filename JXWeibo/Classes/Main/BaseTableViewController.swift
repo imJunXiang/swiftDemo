@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     // 定义一个变量 保存当前用户是否登录
-    var userLogin = false
+    var userLogin = true
     // 定义属性 保存未登录界面
     var visitorView: VisitorView?
     override func loadView() {
