@@ -9,6 +9,8 @@
 import UIKit
 
 class PopoverPresentationController: UIPresentationController {
+    
+    var presentFrame = CGRect.zero
     /** 初始化方法，用于创建负责转场动画的对象 */
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
@@ -20,7 +22,12 @@ class PopoverPresentationController: UIPresentationController {
         // 1.修改弹出视图的大小
         // containerView 容器视图
         // presentedView 被展示视图
-        presentedView?.frame =  CGRect(x: 100, y: 56, width: 200, height: 200)
+        if presentFrame == CGRect.zero {
+            presentedView?.frame =  CGRect(x: 100, y: 56, width: 200, height: 200)
+        } else {
+            presentedView?.frame =  presentFrame
+        }
+        
         
         // 2.在容器视图添加蒙版，插入到展现视图的下面
         containerView?.insertSubview(coverView, at: 0)

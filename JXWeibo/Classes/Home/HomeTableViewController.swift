@@ -20,6 +20,21 @@ class HomeTableViewController: BaseTableViewController {
         
         // 2.初始化导航条
         setupNav()
+        
+        // 3.注册通知 监听菜单
+        NotificationCenter.default.addObserver(self, selector: #selector(change), name: NSNotification.Name(rawValue: JXPopoverAnimatorsWillShow), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(change), name: NSNotification.Name(rawValue: JXPopoverAnimatorsWillDismiss), object: nil)
+
+    }
+    
+    deinit {
+        // 移除通知
+        NotificationCenter.default.removeObserver(self)
+    }
+    /** 修改标题按钮状态 */
+    @objc func change() {
+        let titleBtn = navigationItem.titleView as! TitleButton
+        titleBtn.isSelected = !titleBtn.isSelected
     }
     
     private func setupNav() {
@@ -35,14 +50,12 @@ class HomeTableViewController: BaseTableViewController {
     }
     
     @objc func titleBtnClick(btn:TitleButton) {
-        // 1.修改箭头方向
-        btn.isSelected = !btn.isSelected
         // 2.弹出菜单
         let sb = UIStoryboard(name: "PopoverViewController", bundle: nil)
         let vc = sb.instantiateInitialViewController()
         // 2.1 设置转场的代理
         // 默认情况下moda会移除以前控制器的view,如果自定义就不会
-        vc?.transitioningDelegate = self
+        vc?.transitioningDelegate = popverAnimator
         // 2.2 设置转场的样式
         vc?.modalPresentationStyle = .custom
         
@@ -58,69 +71,11 @@ class HomeTableViewController: BaseTableViewController {
         print(#function)
     }
     
-    // 记录当前书否是展开
-    var isPresent: Bool = false
-}
-
-extension HomeTableViewController : UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
-    
-    //  实现代理方法，告诉系统谁来负责转场动画
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return PopoverPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-    
-    // 告诉系统谁来负责展现动画
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        isPresent = true
-        return self
-    }
-    
-    // 告诉系统谁来负责消失动画
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        isPresent = false
-        return self
-    }
-    
-    // MARK: - UIViewControllerAnimatedTransitioning
-    // MARK: - 只要实现这两个方法就没有默认动画了
-    // 返回动画时长  transitionContexts 上下文 返回了所有参数
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
-    }
-    
-    // 告诉系统如何动画
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
-        if isPresent {
-            // 1.拿到展现的视图
-            let toView = transitionContext.view(forKey: .to)
-            toView?.transform = CGAffineTransform(scaleX: 1.0, y: 0.0)
-            
-            // 注意 一定要将视图添加到容器上
-            transitionContext.containerView.addSubview(toView!)
-            
-            // 设置锚点
-            toView?.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
-            
-            // 2.执行动画
-            UIView.animate(withDuration: 0.5, animations: {
-                // 情况transform
-                toView?.transform = CGAffineTransform(translationX: 1, y: 1)
-            }) { (_) in
-                // 动画执行完毕 一定告知系统 不然可能出w未知错误
-                transitionContext.completeTransition(true)
-            }
-        } else {
-            // 关闭
-            let fromView = transitionContext.view(forKey: .from)
-            UIView.animate(withDuration: 0.2, animations: {
-                // 注意：由于CGFloat是不准确的 所以写0.0会没有动画
-                // 压扁
-                fromView?.transform = CGAffineTransform(scaleX: 1.0, y: 0.000001)
-            }) { (_) in
-                transitionContext.completeTransition(true)
-            }
-        }
-        
-    }
+    // MARK: - 懒加载
+    // 一定要定义一个属性来保存自定义转场对象，否则会保存
+    private lazy var popverAnimator:PopoverAnimator = {
+        let pa = PopoverAnimator()
+        pa.presentFrame = CGRect(x: 100, y: 56, width: 200, height: 350)
+        return pa
+    }()
 }
