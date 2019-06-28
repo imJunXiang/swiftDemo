@@ -68,7 +68,9 @@ class HomeTableViewController: BaseTableViewController {
     }
     
     @objc func rightItemClick() {
-        print(#function)
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        present(vc!, animated: true, completion: nil)
     }
     
     // MARK: - 懒加载

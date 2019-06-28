@@ -10,6 +10,8 @@
 		C70DF48022C3C9D000EA5754 /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */; };
 		C70DF48222C3CB0E00EA5754 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */; };
 		C70DF48422C50BC600EA5754 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48322C50BC600EA5754 /* PopoverAnimator.swift */; };
+		C70DF48B22C65EF300EA5754 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70DF48A22C65EF300EA5754 /* QRCodeViewController.storyboard */; };
+		C70DF48D22C6602D00EA5754 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48C22C6602D00EA5754 /* QRCodeViewController.swift */; };
 		C7A985E322BFC81300078A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A985E222BFC81300078A6C /* AppDelegate.swift */; };
 		C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A985E922BFC81400078A6C /* Assets.xcassets */; };
 		C7A985FF22BFD2FF00078A6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A985FE22BFD2FF00078A6C /* MainViewController.swift */; };
@@ -66,6 +68,8 @@
 		C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
 		C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		C70DF48322C50BC600EA5754 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		C70DF48A22C65EF300EA5754 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
+		C70DF48C22C6602D00EA5754 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		C7A985DF22BFC81300078A6C /* JXWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A985E222BFC81300078A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A985E922BFC81400078A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70DF48522C650AF00EA5754 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C70DF48A22C65EF300EA5754 /* QRCodeViewController.storyboard */,
+				C70DF48C22C6602D00EA5754 /* QRCodeViewController.swift */,
+			);
+			name = QRCode;
+			path = Classes/Home/QRCode;
+			sourceTree = SOURCE_ROOT;
+		};
 		C7A985D622BFC81300078A6C = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +189,7 @@
 		C7A985F522BFD22C00078A6C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C70DF48522C650AF00EA5754 /* QRCode */,
 				C7A986AF22C3BFC600078A6C /* Popover */,
 				C7A9860022BFD34E00078A6C /* HomeTableViewController.swift */,
 			);
@@ -367,6 +382,7 @@
 				C7A986A822C266F300078A6C /* README.md in Resources */,
 				C7A986B122C3C05200078A6C /* PopoverViewController.storyboard in Resources */,
 				C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */,
+				C70DF48B22C65EF300EA5754 /* QRCodeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +426,7 @@
 				C7A9869322C266F300078A6C /* ConstraintConfig.swift in Sources */,
 				C7A9868A22C266F300078A6C /* ConstraintAttributes.swift in Sources */,
 				C70DF48022C3C9D000EA5754 /* PopoverPresentationController.swift in Sources */,
+				C70DF48D22C6602D00EA5754 /* QRCodeViewController.swift in Sources */,
 				C70DF48222C3CB0E00EA5754 /* PopoverViewController.swift in Sources */,
 				C7A9868D22C266F300078A6C /* ConstraintInsets.swift in Sources */,
 				C7A9869F22C266F300078A6C /* ConstraintView+Extensions.swift in Sources */,
