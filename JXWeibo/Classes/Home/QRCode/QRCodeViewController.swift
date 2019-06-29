@@ -9,6 +9,7 @@
 import UIKit
 
 class QRCodeViewController: UIViewController {
+    // 休息 storyBoard 是真不好用
     @IBAction func closeBtnClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
