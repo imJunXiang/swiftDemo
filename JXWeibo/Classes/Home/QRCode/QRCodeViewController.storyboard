@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="二维码" image="qrcode_tabbar_icon_qrcode" id="KWM-FS-peA"/>
+                                    <tabBarItem tag="1" title="二维码" image="qrcode_tabbar_icon_qrcode" id="KWM-FS-peA"/>
                                     <tabBarItem title="条形码" image="qrcode_tabbar_icon_barcode" id="QTA-kD-Vce"/>
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,12 +61,10 @@
                                     <constraint firstAttribute="trailing" secondItem="Cqi-Tk-Mg0" secondAttribute="trailing" id="3gK-Tk-aSD"/>
                                     <constraint firstItem="Cqi-Tk-Mg0" firstAttribute="top" secondItem="zUX-7m-QZx" secondAttribute="top" id="5vz-ks-W8X"/>
                                     <constraint firstItem="Cqi-Tk-Mg0" firstAttribute="leading" secondItem="zUX-7m-QZx" secondAttribute="leading" id="Es0-7V-oVf"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="HTi-hW-MfT"/>
                                     <constraint firstAttribute="bottom" secondItem="Cqi-Tk-Mg0" secondAttribute="bottom" id="M8u-pf-Ude"/>
                                     <constraint firstItem="5ta-fD-opY" firstAttribute="width" secondItem="zUX-7m-QZx" secondAttribute="width" id="Qua-YZ-ZWc"/>
                                     <constraint firstItem="5ta-fD-opY" firstAttribute="top" secondItem="zUX-7m-QZx" secondAttribute="top" id="WKt-L9-dAu"/>
                                     <constraint firstAttribute="height" constant="300" id="dyK-uT-2GG"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gVw-zT-66T"/>
                                     <constraint firstAttribute="width" constant="300" id="h0H-Pr-k19"/>
                                     <constraint firstItem="5ta-fD-opY" firstAttribute="centerX" secondItem="zUX-7m-QZx" secondAttribute="centerX" id="xVN-2N-iqN"/>
                                     <constraint firstItem="5ta-fD-opY" firstAttribute="height" secondItem="zUX-7m-QZx" secondAttribute="height" id="yZs-df-7Xq"/>
@@ -89,7 +87,10 @@
                         <barButtonItem key="rightBarButtonItem" title="相册" id="uSd-WE-Fia"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="containerHeightCons" destination="dyK-uT-2GG" id="Vvf-Ra-TkG"/>
                         <outlet property="customTabbar" destination="brZ-Q9-aan" id="tQD-44-V3v"/>
+                        <outlet property="scanLineView" destination="5ta-fD-opY" id="V87-QZ-uPp"/>
+                        <outlet property="scanlineCons" destination="WKt-L9-dAu" id="N5h-3N-9E0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8g-5K-yz1" userLabel="First Responder" sceneMemberID="firstResponder"/>

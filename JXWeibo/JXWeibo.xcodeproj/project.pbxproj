@@ -10,7 +10,7 @@
 		C70DF48022C3C9D000EA5754 /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF47F22C3C9D000EA5754 /* PopoverPresentationController.swift */; };
 		C70DF48222C3CB0E00EA5754 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48122C3CB0E00EA5754 /* PopoverViewController.swift */; };
 		C70DF48422C50BC600EA5754 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48322C50BC600EA5754 /* PopoverAnimator.swift */; };
-		C70DF48B22C65EF300EA5754 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70DF48A22C65EF300EA5754 /* QRCodeViewController.storyboard */; };
+		C70DF48B22C65EF300EA5754 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70DF48A22C65EF300EA5754 /* QRCodeViewController.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		C70DF48D22C6602D00EA5754 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF48C22C6602D00EA5754 /* QRCodeViewController.swift */; };
 		C7A985E322BFC81300078A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A985E222BFC81300078A6C /* AppDelegate.swift */; };
 		C7A985EA22BFC81400078A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A985E922BFC81400078A6C /* Assets.xcassets */; };
@@ -345,6 +345,9 @@
 		C7A985D722BFC81300078A6C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "俊祥";
