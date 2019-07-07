@@ -17,6 +17,7 @@
 		C70DF51D22D2392000EA5754 /* JXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF51C22D2392000EA5754 /* JXProfileViewController.swift */; };
 		C70DF51F22D2392F00EA5754 /* JXNearShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF51E22D2392F00EA5754 /* JXNearShopViewController.swift */; };
 		C70DF52122D23AF900EA5754 /* JXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF52022D23AF900EA5754 /* JXBaseViewController.swift */; };
+		C70DF52322D23C4F00EA5754 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF52222D23C4F00EA5754 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C70DF51C22D2392000EA5754 /* JXProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXProfileViewController.swift; sourceTree = "<group>"; };
 		C70DF51E22D2392F00EA5754 /* JXNearShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXNearShopViewController.swift; sourceTree = "<group>"; };
 		C70DF52022D23AF900EA5754 /* JXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXBaseViewController.swift; sourceTree = "<group>"; };
+		C70DF52222D23C4F00EA5754 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		C70DF50D22D2336000EA5754 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C70DF52222D23C4F00EA5754 /* UIColor+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				C70DF4FA22D2324C00EA5754 /* AppDelegate.swift in Sources */,
 				C70DF52122D23AF900EA5754 /* JXBaseViewController.swift in Sources */,
 				C70DF51F22D2392F00EA5754 /* JXNearShopViewController.swift in Sources */,
+				C70DF52322D23C4F00EA5754 /* UIColor+Extension.swift in Sources */,
 				C70DF51B22D2390C00EA5754 /* JXShopCartViewController.swift in Sources */,
 				C70DF51D22D2392000EA5754 /* JXProfileViewController.swift in Sources */,
 				C70DF51522D233CA00EA5754 /* JXMainViewController.swift in Sources */,
