@@ -8,10 +8,15 @@
 
 import UIKit
 
-class JXBaseViewController: UIViewController {
-
+class JXBaseViewController: UIViewController,UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor
+        tabBarController?.delegate = self
+    }
+    
+    // MARK: -UITabBarControllerDelegate
+    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return JXTransformer()
     }
 }

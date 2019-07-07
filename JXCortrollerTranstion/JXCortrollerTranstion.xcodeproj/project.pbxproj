@@ -18,6 +18,7 @@
 		C70DF51F22D2392F00EA5754 /* JXNearShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF51E22D2392F00EA5754 /* JXNearShopViewController.swift */; };
 		C70DF52122D23AF900EA5754 /* JXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF52022D23AF900EA5754 /* JXBaseViewController.swift */; };
 		C70DF52322D23C4F00EA5754 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF52222D23C4F00EA5754 /* UIColor+Extension.swift */; };
+		C70DF52522D23F1800EA5754 /* JXTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF52422D23F1800EA5754 /* JXTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C70DF51E22D2392F00EA5754 /* JXNearShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXNearShopViewController.swift; sourceTree = "<group>"; };
 		C70DF52022D23AF900EA5754 /* JXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXBaseViewController.swift; sourceTree = "<group>"; };
 		C70DF52222D23C4F00EA5754 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C70DF52422D23F1800EA5754 /* JXTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		C70DF51022D2336000EA5754 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C70DF52422D23F1800EA5754 /* JXTransformer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				C70DF51B22D2390C00EA5754 /* JXShopCartViewController.swift in Sources */,
 				C70DF51D22D2392000EA5754 /* JXProfileViewController.swift in Sources */,
 				C70DF51522D233CA00EA5754 /* JXMainViewController.swift in Sources */,
+				C70DF52522D23F1800EA5754 /* JXTransformer.swift in Sources */,
 				C70DF51722D238DB00EA5754 /* JXHomeViewController.swift in Sources */,
 				C70DF51922D238F500EA5754 /* JXCategoryViewController.swift in Sources */,
 			);
