@@ -17,6 +17,6 @@ class JXBaseViewController: UIViewController,UITabBarControllerDelegate {
     
     // MARK: -UITabBarControllerDelegate
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return JXTransformer()
+        return JXTabbarTransformer()
     }
 }

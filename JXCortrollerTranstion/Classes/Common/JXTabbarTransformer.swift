@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class JXTransformer: NSObject,UIViewControllerAnimatedTransitioning {
+class JXTabbarTransformer: NSObject,UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
